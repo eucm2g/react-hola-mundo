@@ -2,22 +2,24 @@ import React from 'react';
 import logo from './../logo.svg';
 import './MiApp.css';
 
-function MiApp() {
+function MiApp(props) {
+  const variable=props.variable;
+  const array=props.array;
+  console.log(props);
   return (
     <div className="MiApp">
       <header className="MiApp-header">
         <img src={logo} className="MiApp-logo" alt="logo" />
         <p>
-          Edit <code>src/MiApp.js</code> and save to reload.
+          {variable}
         </p>
-        <a
-          className="MiApp-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ul className="menu">
+          {
+            array && array.map(
+              (item,key)=> <li key={key}>{item.nombre}</li>
+            )
+          }
+        </ul>
       </header>
     </div>
   );
