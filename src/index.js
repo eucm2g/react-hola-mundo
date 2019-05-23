@@ -1,5 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './router';
+render(
+    <Router>
+        <AppRoutes/>
+    </Router>, document.getElementById('root')
+);
+
+
+
+/*
 import './index.css';
 import App from './App';
 import MiApp from './MiApp/MiApp';
@@ -13,3 +24,4 @@ ReactDOM.render(<MiClase />, document.getElementById('MiClase'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+*/
